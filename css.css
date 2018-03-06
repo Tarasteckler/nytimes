@@ -1,9 +1,8 @@
 body{
     text-align: center;
     font-family: georgia, sans-serif;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffcc), to(#ffff4d)) no-repeat fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#39ac39), to(#99ff66)) no-repeat fixed;
 }
-
 h1, h2{
     font-weight: bold;
 
@@ -20,8 +19,8 @@ h1, h2{
 }
 
 #logo{
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
 }
 
 .clapper{
@@ -54,5 +53,5 @@ button, #critics {
 }
 
 button:hover{
-    background-color: #ffb84d;
+    background-color: #39ac39;
 }
