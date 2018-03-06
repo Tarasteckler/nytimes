@@ -1,0 +1,58 @@
+body{
+    text-align: center;
+    font-family: georgia, sans-serif;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffcc), to(#ffff4d)) no-repeat fixed;
+}
+
+h1, h2{
+    font-weight: bold;
+
+}
+
+#reviewInfo, #options{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+#reviewInfo{
+    border: 1px  black;
+}
+
+#logo{
+    height: 50%;
+    width: 50%;
+}
+
+.clapper{
+    height:10%;
+    width:10%;
+}
+
+button, #critics {
+    background-color: white;
+    margin-right:auto;
+    margin-left:auto;
+    color: black;
+    font-family: georgia, sans-serif;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+}
+
+#query{
+    background-color: white;
+    margin-right:auto;
+    margin-left:auto;
+    color: black;
+    font-family: georgia, sans-serif;
+    text-align: center;
+    height: 33px;
+    width: 200px;
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: #ffb84d;
+}

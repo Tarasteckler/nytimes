@@ -1,11 +1,18 @@
 $(document).ready(function(){
+    $("#reviewInfo").hide();
+
     $("#keywordButton").on("click", function(){
         var query = document.getElementById("query").value;
         apiCall1 (query);
+        document.getElementById("query").value = "";
+        document.getElementById("reviewInfo").innerHTML = "<tr><td>Title</td><td>Critic</td><td>Picture</td><td>Summary</td><td>Review</td>";
     });
     $("#criticButton").on("click", function(){
-       var reviewer = document.getElementById("reviewer").value;
+       var reviewer = document.getElementById("critics").value;
+       console.log(reviewer);
+       console.log(document.getElementById("critics").value);
        apiCall2(reviewer);
+       document.getElementById("reviewInfo").innerHTML = "<tr><td>Title</td><td>Critic</td><td>Picture</td><td>Summary</td><td>Review</td>";
     });
 
 
@@ -44,12 +51,21 @@ $(document).ready(function(){
     }
 
     function getInfo(result){
-        console.log(pic);
+        $("#reviewInfo").show();
+
         for (i = 0; i < result.results.length; i++){
-            var pic = result.results[i].multimedia.src;
-            console.log(pic);
-            document.getElementById("reviewInfo").innerHTML += "<tr><td>" + result.results[i].display_title +
-                "</td><td>" + result.results[i].byline + "</td><td><img src=" + pic + "></td><td>" + result.results[i].summary_short + "</td><td>review here</td>";
+            var url = result.results[i].link.suggested_link_text;
+            var link = url.link(result.results[i].link.url);
+            if (result.results[i].multimedia === null){
+                document.getElementById("reviewInfo").innerHTML += "<tr><td>" + result.results[i].display_title +
+                    "</td><td>" + result.results[i].byline + "</td><td> No image :( </td><td>" + result.results[i].summary_short +
+                    "</td><td>" + link + "</td>";
+            }else{
+                var pic = result.results[i].multimedia.src;
+                document.getElementById("reviewInfo").innerHTML += "<tr><td>" + result.results[i].display_title +
+                    "</td><td>" + result.results[i].byline + "</td><td><img src=" + pic + "></td><td>" + result.results[i].summary_short +
+                    "</td><td>" + link + "</td>";
+            }
         }
     }
 

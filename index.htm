@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <title>New York Times Article Archive</title>
+    <title>NYTimes Movie Reviews</title>
     <script src="js.js"></script>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
 <h1>
-    The New York Times Movie Reviews
+    <img id="logo" src="img/nytlogo.png"><br><br>
+    Movie Reviews
 </h1>
-<h2>
-    Search by movie title
-</h2>
-<input id="query" type="text" value="Call me by your name">
-<button id="keywordButton" >Search</button>
+<img class="clapper" src="img/clapper.png">
 
-<h2>
-    Search by movie critic
-</h2>
-<input id="reviewer" type="text">
-<button id="criticButton" >Search</button><br><br>
+<table id="pics" cellspacing="0" cellpadding="0">
 
-<table id="reviewInfo" border="1" cellpadding="10">
+</table>
+<table id="options" cellpadding="15" cellspacing="10">
+    <tr>
+        <td>
+            <h2>
+                Search by title:
+            </h2>
+            <input id="query" type="text" value="Call Me By Your Name">
+            <button id="keywordButton">Search</button>
+        </td>
+        <td>
+            <h2>
+                Search by critic:
+            </h2>
+            <select id="critics">
+                <option value="null">--Select--</option>
+                <option value="Manohla Dargis">Manohla Dargis</option>
+                <option value="Jeannette Catsoulis">Jeannette Catsoulis</option>
+                <option value="Glenn Kenny">Glenn Kenny</option>
+                <option value="Ben Kenigsberg">Ben Kenigsberg</option>
+                <option value="Ken Jaworowski">Ken Jaworowski</option>
+                <option value="A. O. Scott">A. O. Scott</option>
+                <option value="Teo Bugbee">Teo Bugbee</option>
+                <option value="Rachel Saltz">Rachel Saltz</option>
+                <option value="Jason Zinoman">Jason Zinoman</option>
+                <option value="Monica Castillo">Monica Castillo</option>
+            </select>
+            <button id="criticButton">Search</button>
+        </td>
+    </tr>
+</table>
+
+<table id="reviewInfo" border="1" cellpadding="10" cellspacing="0" >
     <tr>
         <td>
             Title
